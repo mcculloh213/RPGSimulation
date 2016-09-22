@@ -1,0 +1,4 @@
+C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGInterfaces\RPGInterfaces\bin\Debug\RPGInterfaces.dll
+C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGInterfaces\RPGInterfaces\bin\Debug\RPGInterfaces.pdb
+C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGInterfaces\RPGInterfaces\obj\Debug\RPGInterfaces.dll
+C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGInterfaces\RPGInterfaces\obj\Debug\RPGInterfaces.pdb

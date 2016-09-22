@@ -1,0 +1,10 @@
+C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGInterfaces\RPGTester\obj\Debug\RPGTester.csprojResolveAssemblyReference.cache
+C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGInterfaces\RPGTester\bin\Debug\RPGTester.exe.config
+C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGInterfaces\RPGTester\bin\Debug\RPGTester.exe
+C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGInterfaces\RPGTester\bin\Debug\RPGTester.pdb
+C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGInterfaces\RPGTester\bin\Debug\RPGInterfaces.dll
+C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGInterfaces\RPGTester\bin\Debug\RPGInterfaces.pdb
+C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGInterfaces\RPGTester\obj\Debug\RPGTester.exe
+C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGInterfaces\RPGTester\obj\Debug\RPGTester.pdb
+C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGInterfaces\RPGTester\bin\Debug\RPGClasses.dll
+C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGInterfaces\RPGTester\bin\Debug\RPGClasses.pdb
