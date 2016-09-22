@@ -14,6 +14,8 @@ namespace McCullough.RPGClasses
         protected Random randomNumbers = new Random();
 
         protected IAttack attackBehavior;
+        protected ICasting spellBehavior;
+        protected IDefense defenseBehavior;
 
         public string CharacterClass
         {
@@ -33,9 +35,20 @@ namespace McCullough.RPGClasses
             protected set;
         }
 
+        public int Magic
+        {
+            get;
+            protected set;
+        }
+
         public virtual void PerformAttack(ICharacter target)
         {
             attackBehavior.Attack(this, target);
+        }
+
+        public void PerformSpell(ICharacter target)
+        {
+            spellBehavior.Cast(this, target);
         }
 
         public virtual void ReceiveAttack(int damage)

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace McCullough.RPGInterfaces
 {
-    interface IDefense
+    public interface IDefense
     {
         // Methods
         void Defend(ICharacter defender);

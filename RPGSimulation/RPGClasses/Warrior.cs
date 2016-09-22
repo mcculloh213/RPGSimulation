@@ -1,4 +1,5 @@
-﻿using System;
+﻿using McCullough.RPGAttacks;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,14 +18,14 @@ namespace McCullough.RPGClasses
         }
 
         public Warrior(string name)
-            : this(name, GameConstants.Instance.PlayerHitpoints)
+            : this(name, GameConstants.Instance.PlayerHP)
         {
 
         }
 
         public Warrior()
             : this(CharacterBase.AnonymousName + (++CharacterBase.anonymousCounter).ToString(),
-                  GameConstants.Instance.PlayerHitpoints)
+                  GameConstants.Instance.PlayerHP)
         {
 
         }
