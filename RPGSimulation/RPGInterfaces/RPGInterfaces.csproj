@@ -40,8 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ICasting.cs" />
     <Compile Include="ICharacter.cs" />
     <Compile Include="IAttack.cs" />
+    <Compile Include="ICombat.cs" />
     <Compile Include="IDefense.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -5,3 +5,14 @@ C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGInterfaces\RPGClasses\b
 C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGInterfaces\RPGClasses\obj\Debug\RPGClasses.csprojResolveAssemblyReference.cache
 C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGInterfaces\RPGClasses\obj\Debug\RPGClasses.dll
 C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGInterfaces\RPGClasses\obj\Debug\RPGClasses.pdb
+C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGSimulation\RPGSimulation\RPGClasses\obj\Debug\RPGClasses.csprojResolveAssemblyReference.cache
+C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGSimulation\RPGSimulation\RPGClasses\obj\Debug\RPGClasses.dll
+C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGSimulation\RPGSimulation\RPGClasses\obj\Debug\RPGClasses.pdb
+C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGSimulation\RPGSimulation\RPGClasses\bin\Debug\RPGClasses.dll
+C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGSimulation\RPGSimulation\RPGClasses\bin\Debug\RPGClasses.pdb
+C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGSimulation\RPGSimulation\RPGClasses\bin\Debug\RPGAttacks.dll
+C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGSimulation\RPGSimulation\RPGClasses\bin\Debug\RPGInterfaces.dll
+C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGSimulation\RPGSimulation\RPGClasses\bin\Debug\RPGAttacks.pdb
+C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGSimulation\RPGSimulation\RPGClasses\bin\Debug\RPGInterfaces.pdb
+C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGSimulation\RPGSimulation\RPGClasses\bin\Debug\LCRNG.dll
+C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGSimulation\RPGSimulation\RPGClasses\bin\Debug\LCRNG.pdb

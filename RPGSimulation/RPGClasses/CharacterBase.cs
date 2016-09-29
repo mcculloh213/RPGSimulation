@@ -1,4 +1,6 @@
-﻿using McCullough.RPGInterfaces;
+﻿using McCullough.LCRNG;
+using McCullough.RPGAttacks;
+using McCullough.RPGInterfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +13,7 @@ namespace McCullough.RPGClasses
     {
         protected const string AnonymousName = "Anonymous";
         protected static int anonymousCounter = 0;
-        protected Random randomNumbers = new Random();
+        
 
         protected IAttack attackBehavior;
         protected ICasting spellBehavior;
@@ -53,7 +55,7 @@ namespace McCullough.RPGClasses
 
         public virtual void ReceiveAttack(int damage)
         {
-            if (randomNumbers.Next(GameConstants.Instance.DodgeDifficulty) != 0)
+            if (LCRNG32.Instance.Next(GameConstants.Instance.DodgeDifficulty) != 0)
             {
                 Console.WriteLine(this.Name + " takes " + damage + " damage.");
                 Health -= damage;

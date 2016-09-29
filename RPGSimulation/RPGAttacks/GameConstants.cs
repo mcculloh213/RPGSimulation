@@ -107,6 +107,26 @@ namespace McCullough.RPGAttacks
             get { return d20; }
         }
 
+        public int Mult1
+        {
+            get { return mult1; }
+        }
+
+        public int Mult2
+        {
+            get { return mult2; }
+        }
+
+        public int Mult3
+        {
+            get { return mult3; }
+        }
+
+        public int Mult4
+        {
+            get { return mult4; }
+        }
+
         public int PlayerHP
         {
             get { return playerHP; }

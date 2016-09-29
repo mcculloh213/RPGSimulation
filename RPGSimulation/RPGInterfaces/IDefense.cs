@@ -9,6 +9,6 @@ namespace McCullough.RPGInterfaces
     public interface IDefense
     {
         // Methods
-        void Defend(ICharacter defender);
+        void Defend(ICharacter defender, int damage);
     }
 }

@@ -41,19 +41,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Archer.cs" />
-    <Compile Include="BadGradeAttack.cs" />
-    <Compile Include="BowAttack.cs" />
+    <Compile Include="Cactuar.cs" />
     <Compile Include="CharacterBase.cs" />
     <Compile Include="ComputerWizard.cs" />
-    <Compile Include="FireAttack.cs" />
-    <Compile Include="GameConstants.cs" />
     <Compile Include="Mage.cs" />
-    <Compile Include="NormalAttack.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SwordAttack.cs" />
     <Compile Include="Warrior.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LCRNG\LCRNG.csproj">
+      <Project>{DD99DD69-E728-492D-A232-C8DA09AE8145}</Project>
+      <Name>LCRNG</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RPGAttacks\RPGAttacks.csproj">
+      <Project>{f2b44e7d-7707-4143-ac4c-3138a0dee269}</Project>
+      <Name>RPGAttacks</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RPGInterfaces\RPGInterfaces.csproj">
       <Project>{a20d83fb-b644-470e-9666-e5d956061e37}</Project>
       <Name>RPGInterfaces</Name>

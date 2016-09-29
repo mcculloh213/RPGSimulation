@@ -1,4 +1,5 @@
-﻿using McCullough.RPGInterfaces;
+﻿using McCullough.LCRNG;
+using McCullough.RPGInterfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +10,26 @@ namespace McCullough.RPGAttacks
 {
     public class NormalAttack : IAttack
     {
-        protected Random randomNumbers = new Random();
-
         public virtual void Attack(ICharacter attacker, ICharacter target)
         {
-            int damage = GameConstants.Instance.Plus5 +
-                randomNumbers.Next(GameConstants.Instance.D10);
+            int damage;
+            int roll = LCRNG32.Instance.Next(GameConstants.Instance.D20);
+            if (roll == 20)
+            {
+                damage = (GameConstants.Instance.Plus5 +
+                    LCRNG32.Instance.Next(GameConstants.Instance.D10)) *
+                    GameConstants.Instance.Mult2;
+            }
+            else
+            {
+                damage = GameConstants.Instance.Plus5 +
+                    LCRNG32.Instance.Next(GameConstants.Instance.D10);
+            }
+            target.ReceiveAttack(damage);
+        }
+
+        public virtual void FixedAttack(ICharacter attacker, ICharacter target, int damage)
+        {
             target.ReceiveAttack(damage);
         }
     }

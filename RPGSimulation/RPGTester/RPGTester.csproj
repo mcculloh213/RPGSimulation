@@ -53,9 +53,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LCRNG\LCRNG.csproj">
+      <Project>{dd99dd69-e728-492d-a232-c8da09ae8145}</Project>
+      <Name>LCRNG</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RPGClasses\RPGClasses.csproj">
       <Project>{41d22071-2392-494a-9ec5-8229bbcc430c}</Project>
       <Name>RPGClasses</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RPGCombat\RPGCombat.csproj">
+      <Project>{cf1a66e4-3595-4b88-a642-7caa2af1ed02}</Project>
+      <Name>RPGCombat</Name>
     </ProjectReference>
     <ProjectReference Include="..\RPGInterfaces\RPGInterfaces.csproj">
       <Project>{a20d83fb-b644-470e-9666-e5d956061e37}</Project>
