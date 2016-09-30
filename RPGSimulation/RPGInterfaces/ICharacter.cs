@@ -11,6 +11,9 @@
         // Methods
         void PerformAttack(ICharacter target);
         void PerformSpell(ICharacter target);
+        void PerformSpecial(ICharacter target);
+        void PerformDefend(ICharacter defender, int damage);
         void ReceiveAttack(int damage);
+        void ReduceMagic(int reduction);
     }
 }

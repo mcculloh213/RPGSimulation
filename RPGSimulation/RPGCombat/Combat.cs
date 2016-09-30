@@ -1,4 +1,7 @@
-﻿using McCullough.RPGInterfaces;
+﻿using McCullough.LCRNG;
+using McCullough.RPGClassLookup;
+using McCullough.RPGGameConstants;
+using McCullough.RPGInterfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -122,12 +125,51 @@ namespace McCullough.RPGCombat
             int attackerGroupIndex = combatants[nextCombatant].Item1;
             int attackerPartyIndex = combatants[nextCombatant].Item2;
             int enemyGroupIndex = (attackerGroupIndex + 1) % 2;
+            int mv; // Move choice
+            int pos; // Position of move choice
 
             ICharacter attacker = combatGroups[attackerGroupIndex][attackerPartyIndex];
             ICharacter target = ChooseRandomLivingTarget(enemyGroupIndex);
 
+            int[] prb = ClassLookup.Instance.GetValue(attacker.CharacterClass);
+            List<int> p = prb.ToList(); // Get moveset probabilities vector
+            int roll = LCRNG32.Instance.Next(GameConstants.Instance.D100); // Get an integer between 0 and 100 inclusive
+            int maxvalue = p.Max(); // Get the max value of the probability vector
+            p.Remove(maxvalue); // Remove maxvalue from p
+            int midvalue = p.Max(); // Get the mid value of the probability vector
+            p.Remove(midvalue); // Remove midvalue from p
+            int minvalue = p.Max(); // Get the min value of the probability vector
+            p.Remove(minvalue); // Remove minvalue from p
+
+            if (roll < maxvalue) // roll is between 0 and maxvalue -- CHOOSE: maxvalue
+            {
+                mv = maxvalue;
+            }
+            else if (roll >= maxvalue && roll < maxvalue + midvalue) // roll is between maxvalue and maxvalue + midvalue -- CHOOSE: midvalue
+            {
+                mv = midvalue;
+            }
+            else // roll is between maxvalue + midvalue and maxvalue + midvalue + minvalue -- CHOOSE: minvalue
+            {
+                mv = minvalue;
+            }
+
+            pos = prb.ToList().IndexOf(mv);
+
             if (target != null)
-                attacker.PerformAttack(target);
+                if (pos == 0)
+                {
+                    attacker.PerformAttack(target);
+                }
+                else if (pos == 1)
+                {
+                    attacker.PerformSpell(target);
+                }
+                else
+                {
+                    attacker.PerformSpecial(target);
+                }
+                            
         }
 
         private void FindNextLivingCombatant()

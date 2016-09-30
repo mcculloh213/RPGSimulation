@@ -27,6 +27,7 @@ namespace McCullough.RPGCore
             enemyParty.Add(player4);
             enemyParty.Add(player5);
             Combat cbat = new Combat(playerParty, enemyParty, "Player Party", "Enemy Party");
+            // player1.PerformSpell(player3);
             cbat.AutoBattle();
 
             // LCRNG32 lcrng = new LCRNG32();

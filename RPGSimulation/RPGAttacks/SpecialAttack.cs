@@ -1,4 +1,5 @@
 ﻿using McCullough.LCRNG;
+using McCullough.RPGGameConstants;
 using McCullough.RPGInterfaces;
 using System;
 using System.Collections.Generic;
@@ -32,12 +33,28 @@ namespace McCullough.RPGAttacks
                 damage = GameConstants.Instance.Plus6 +
                     LCRNG32.Instance.Next(GameConstants.Instance.D12);
             }
-            target.ReceiveAttack(damage);
+            roll = LCRNG32.Instance.Next(GameConstants.Instance.D100);
+            if (roll >= 85) // 15% chance to defend
+            {
+                target.PerformDefend(target, damage);
+            }
+            else
+            {
+                target.ReceiveAttack(damage);
+            }
         }
 
         public void FixedAttack(ICharacter attacker, ICharacter target, int damage)
         {
-            target.ReceiveAttack(damage);
+            int roll = LCRNG32.Instance.Next(GameConstants.Instance.D100);
+            if (roll >= 85) // 15% chance to defend
+            {
+                target.PerformDefend(target, damage);
+            }
+            else
+            {
+                target.ReceiveAttack(damage);
+            }
         }
     }
 }

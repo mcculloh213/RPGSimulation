@@ -45,6 +45,7 @@
     <Compile Include="IAttack.cs" />
     <Compile Include="ICombat.cs" />
     <Compile Include="IDefense.cs" />
+    <Compile Include="ISpecial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

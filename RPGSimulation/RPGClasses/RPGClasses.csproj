@@ -57,9 +57,25 @@
       <Project>{f2b44e7d-7707-4143-ac4c-3138a0dee269}</Project>
       <Name>RPGAttacks</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RPGCasting\RPGCasting.csproj">
+      <Project>{46B93E02-3F1C-4696-B274-B69EED75EAB1}</Project>
+      <Name>RPGCasting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RPGDefenses\RPGDefenses.csproj">
+      <Project>{4B0ECA06-E780-4A1A-9853-328B02DB0348}</Project>
+      <Name>RPGDefenses</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RPGGameConstants\RPGGameConstants.csproj">
+      <Project>{0DC22EBE-0D43-46C3-B9B1-5A415C6A7921}</Project>
+      <Name>RPGGameConstants</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RPGInterfaces\RPGInterfaces.csproj">
       <Project>{a20d83fb-b644-470e-9666-e5d956061e37}</Project>
       <Name>RPGInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RPGSpecial\RPGSpecial.csproj">
+      <Project>{F4A03B51-BA7F-4C09-B409-40ED403071C3}</Project>
+      <Name>RPGSpecial</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

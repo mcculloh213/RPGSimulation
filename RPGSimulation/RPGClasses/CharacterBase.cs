@@ -1,5 +1,6 @@
 ﻿using McCullough.LCRNG;
 using McCullough.RPGAttacks;
+using McCullough.RPGGameConstants;
 using McCullough.RPGInterfaces;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,7 @@ namespace McCullough.RPGClasses
 
         protected IAttack attackBehavior;
         protected ICasting spellBehavior;
+        protected ISpecial specialBehavior;
         protected IDefense defenseBehavior;
 
         public string CharacterClass
@@ -43,14 +45,30 @@ namespace McCullough.RPGClasses
             protected set;
         }
 
+        public int CharacterDie
+        {
+            get;
+            protected set;
+        }
+
         public virtual void PerformAttack(ICharacter target)
         {
             attackBehavior.Attack(this, target);
         }
 
-        public void PerformSpell(ICharacter target)
+        public virtual void PerformSpell(ICharacter target)
         {
             spellBehavior.Cast(this, target);
+        }
+
+        public void PerformSpecial(ICharacter target)
+        {
+            specialBehavior.Special(this, target);
+        }
+
+        public virtual void PerformDefend(ICharacter defender, int dmg)
+        {
+            defenseBehavior.Defend(defender, dmg);
         }
 
         public virtual void ReceiveAttack(int damage)
@@ -63,13 +81,28 @@ namespace McCullough.RPGClasses
             }
             else
             {
-                Console.WriteLine(this.Name + " dodges the atatck!");
+                Console.WriteLine(this.Name + " dodges the attack!");
             }
+        }
+
+        public void ReduceMagic(int reduction)
+        {
+            Magic -= reduction;
+            if (Magic < 0) Magic = 0;
         }
 
         public override string ToString()
         {
-            return String.Format("{0} the {1} has {2} health", Name, CharacterClass, Health);
+            string str;
+            if (Magic != -1)
+            {
+                str = String.Format("{0} the {1} has {2} health", Name, CharacterClass, Health);
+            }
+            else
+            {
+                str = String.Format("{0} the {1} has {2} health and {3} MP", Name, CharacterClass, Health, Magic);
+            }
+            return str;            
         }
     }
 }

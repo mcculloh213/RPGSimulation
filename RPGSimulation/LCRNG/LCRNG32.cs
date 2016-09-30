@@ -9,7 +9,7 @@ namespace McCullough.LCRNG
     public class LCRNG32
     {
         protected int seed;
-        public static LCRNG32 instance = new LCRNG32();
+        private static LCRNG32 instance = new LCRNG32();
 
         private LCRNG32()
         {

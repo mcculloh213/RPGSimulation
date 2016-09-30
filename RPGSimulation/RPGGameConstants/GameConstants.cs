@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace McCullough.RPGAttacks
+namespace McCullough.RPGGameConstants
 {
     public class GameConstants
     {
@@ -25,6 +25,7 @@ namespace McCullough.RPGAttacks
         private const int d10 = 10;
         private const int d12 = 12;
         private const int d20 = 20;
+        private const int d100 = 100;
         private const int mult1 = 1;
         private const int mult2 = 2;
         private const int mult3 = 3;
@@ -105,6 +106,11 @@ namespace McCullough.RPGAttacks
         public int D20
         {
             get { return d20; }
+        }
+
+        public int D100
+        {
+            get { return d100; }
         }
 
         public int Mult1

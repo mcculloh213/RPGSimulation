@@ -1,4 +1,8 @@
 ﻿using McCullough.RPGAttacks;
+using McCullough.RPGCasting;
+using McCullough.RPGDefenses;
+using McCullough.RPGGameConstants;
+using McCullough.RPGSpecial;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +17,9 @@ namespace McCullough.RPGClasses
         {
             this.CharacterClass = "Warrior";
             this.attackBehavior = new SwordAttack();
+            this.spellBehavior = new NoCasting();
+            this.specialBehavior = new NoSpecial();
+            this.defenseBehavior = new HeavyShield();
             this.Name = name;
             this.Health = health;
         }
