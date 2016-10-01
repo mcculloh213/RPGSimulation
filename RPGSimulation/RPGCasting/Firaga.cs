@@ -13,7 +13,8 @@ namespace McCullough.RPGCasting
         public Firaga()
         {
             this.Die = GameConstants.Instance.D100;
-            this.Cost = 8;
+            this.Cost = 16;
+            this.Type = "Fire";
         }
 
         public override void Cast(ICharacter attacker, ICharacter target)

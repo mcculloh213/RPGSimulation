@@ -16,10 +16,10 @@ namespace McCullough.RPGClasses
         protected static int anonymousCounter = 0;
         
 
-        protected IAttack attackBehavior;
-        protected ICasting spellBehavior;
-        protected ISpecial specialBehavior;
-        protected IDefense defenseBehavior;
+        //protected IAttack attackBehavior;
+        //protected ICasting spellBehavior;
+        //protected ISpecial specialBehavior;
+        //protected IDefense defenseBehavior;
 
         public string CharacterClass
         {
@@ -50,30 +50,64 @@ namespace McCullough.RPGClasses
             get;
             protected set;
         }
+        
+        public int Dodge
+        {
+            get;
+            protected set;
+        }
+
+        public IAttack AttackBehavior
+        {
+            //get { return attackBehavior; }
+            get;
+            protected set;
+        }
+
+        public ICasting SpellBehavior
+        {
+            //get { return spellBehavior; }
+            get;
+            protected set;
+        }
+
+        public ISpecial SpecialBehavior
+        {
+            //get { return specialBehavior; }
+            get;
+            protected set;
+        }
+
+        public IDefense DefenseBehavior
+        {
+            //get { return defenseBehavior; }
+            get;
+            protected set;
+        }
 
         public virtual void PerformAttack(ICharacter target)
         {
-            attackBehavior.Attack(this, target);
+            AttackBehavior.Attack(this, target);
         }
 
         public virtual void PerformSpell(ICharacter target)
         {
-            spellBehavior.Cast(this, target);
+            SpellBehavior.Cast(this, target);
         }
 
         public void PerformSpecial(ICharacter target)
         {
-            specialBehavior.Special(this, target);
+            SpecialBehavior.Special(this, target);
         }
 
         public virtual void PerformDefend(ICharacter defender, int dmg)
         {
-            defenseBehavior.Defend(defender, dmg);
+            DefenseBehavior.Defend(defender, dmg);
         }
 
         public virtual void ReceiveAttack(int damage)
         {
-            if (LCRNG32.Instance.Next(GameConstants.Instance.DodgeDifficulty) != 0)
+            if (LCRNG32.Instance.Next(Dodge) != 0)
             {
                 Console.WriteLine(this.Name + " takes " + damage + " damage.");
                 Health -= damage;
@@ -82,6 +116,31 @@ namespace McCullough.RPGClasses
             else
             {
                 Console.WriteLine(this.Name + " dodges the attack!");
+            }
+        }
+
+        public virtual void ChangeHealth(int factor, char op)
+        {
+            switch (op)
+            {
+                case '+':
+                    Health += factor;
+                    break;
+                case '-':
+                    Health -= factor;
+                    break;
+                case '*':
+                    Health *= factor;
+                    break;
+                case '/':
+                    Health /= factor;
+                    break;
+                case '%':
+                    Health %= factor;
+                    break;
+                default:
+                    Health = factor;
+                    break;
             }
         }
 
@@ -94,7 +153,7 @@ namespace McCullough.RPGClasses
         public override string ToString()
         {
             string str;
-            if (Magic != -1)
+            if (Magic == -1)
             {
                 str = String.Format("{0} the {1} has {2} health", Name, CharacterClass, Health);
             }

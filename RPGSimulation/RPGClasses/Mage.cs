@@ -13,26 +13,29 @@ namespace McCullough.RPGClasses
 {
     public class Mage : CharacterBase
     {
-        public Mage(string name, int health)
+        public Mage(string name, int health, int magic)
         {
             this.CharacterClass = "Mage";
-            this.attackBehavior = new Staff();
-            this.spellBehavior = new Firaga();
-            this.specialBehavior = new NoSpecial();
-            this.defenseBehavior = new Cloak();
+            this.AttackBehavior = new Staff();
+            this.SpellBehavior = new Firaga();
+            this.SpecialBehavior = new NoSpecial();
+            this.DefenseBehavior = new Cloak();
             this.Name = name;
             this.Health = health;
+            this.Magic = magic;
+            this.CharacterDie = GameConstants.Instance.D8;
+            this.Dodge = 4; // 3:1 hit-miss ratio
         }
 
         public Mage(string name)
-            : this(name, GameConstants.Instance.PlayerHP)
+            : this(name, GameConstants.Instance.PlayerHP, GameConstants.Instance.PlayerMP)
         {
 
         }
 
         public Mage()
             : this(CharacterBase.AnonymousName + (++CharacterBase.anonymousCounter).ToString(),
-                  GameConstants.Instance.PlayerHP)
+                  GameConstants.Instance.PlayerHP, GameConstants.Instance.PlayerMP)
         {
 
         }

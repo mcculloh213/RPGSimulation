@@ -163,7 +163,23 @@ namespace McCullough.RPGCombat
                 }
                 else if (pos == 1)
                 {
-                    attacker.PerformSpell(target);
+                    if (attacker.Magic > 0) // attacker has positive MP
+                    {
+                        if (attacker.SpellBehavior.Type == "Healing") // Probably can make this "smarter". Define a function that will find party member w/lowest HP
+                        {
+                            target = ChooseRandomLivingTarget(attackerGroupIndex);
+                            attacker.PerformSpell(target);
+                        }
+                        else
+                        {
+                            attacker.PerformSpell(target);
+                        }
+                    }
+                    else // attacker has no MP 
+                    {
+                        attacker.PerformAttack(target);
+                    }
+                    
                 }
                 else
                 {

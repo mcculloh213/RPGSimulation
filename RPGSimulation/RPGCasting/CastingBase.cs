@@ -22,10 +22,23 @@ namespace McCullough.RPGCasting
             protected set;
         }
 
+        public string Type
+        {
+            get;
+            protected set;
+        }
+
         public virtual void Cast(ICharacter caster, ICharacter target)
         {
             int damage = LCRNG32.Instance.Next(Die);
             target.ReceiveAttack(damage);
+            caster.ReduceMagic(Cost);
+        }
+
+        public void Heal(ICharacter caster, ICharacter target)
+        {
+            int factor = LCRNG32.Instance.Next(Die);
+            target.ChangeHealth(factor, '+');
             caster.ReduceMagic(Cost);
         }
     }

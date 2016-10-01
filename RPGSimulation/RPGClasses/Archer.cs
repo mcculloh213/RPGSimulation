@@ -16,13 +16,15 @@ namespace McCullough.RPGClasses
         public Archer(string name, int health, int magic)
         {
             this.CharacterClass = "Archer";
-            this.attackBehavior = new BowAttack();
-            this.spellBehavior = new NoCasting();
-            this.specialBehavior = new NoSpecial();
-            this.defenseBehavior = new LeatherArmor();
+            this.AttackBehavior = new BowAttack();
+            this.SpellBehavior = new NoCasting();
+            this.SpecialBehavior = new NoSpecial();
+            this.DefenseBehavior = new LeatherArmor();
             this.Name = name;
             this.Health = health;
             this.Magic = magic;
+            this.CharacterDie = GameConstants.Instance.D8;
+            this.Dodge = 6; // 5:1 hit-miss ratio
         }
 
         public Archer(string name)

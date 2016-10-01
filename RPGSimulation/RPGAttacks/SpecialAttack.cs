@@ -34,7 +34,7 @@ namespace McCullough.RPGAttacks
                     LCRNG32.Instance.Next(GameConstants.Instance.D12);
             }
             roll = LCRNG32.Instance.Next(GameConstants.Instance.D100);
-            if (roll >= 85) // 15% chance to defend
+            if (roll >= 60) // 40% chance to defend
             {
                 target.PerformDefend(target, damage);
             }
@@ -47,7 +47,7 @@ namespace McCullough.RPGAttacks
         public void FixedAttack(ICharacter attacker, ICharacter target, int damage)
         {
             int roll = LCRNG32.Instance.Next(GameConstants.Instance.D100);
-            if (roll >= 85) // 15% chance to defend
+            if (roll >= 60) // 40% chance to defend
             {
                 target.PerformDefend(target, damage);
             }

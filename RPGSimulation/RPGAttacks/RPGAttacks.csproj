@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="BadGradeAttack.cs" />
     <Compile Include="BowAttack.cs" />
+    <Compile Include="ChefKnife.cs" />
     <Compile Include="FireAttack.cs" />
     <Compile Include="NormalAttack.cs" />
     <Compile Include="OneThousandNeedles.cs" />

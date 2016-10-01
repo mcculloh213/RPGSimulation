@@ -43,6 +43,16 @@
     <Compile Include="ClassLookup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RPGClasses\RPGClasses.csproj">
+      <Project>{41D22071-2392-494A-9EC5-8229BBCC430C}</Project>
+      <Name>RPGClasses</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RPGInterfaces\RPGInterfaces.csproj">
+      <Project>{A20D83FB-B644-470E-9666-E5D956061E37}</Project>
+      <Name>RPGInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

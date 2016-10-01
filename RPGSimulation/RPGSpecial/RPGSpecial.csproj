@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HexReduce.cs" />
+    <Compile Include="MultiAttack.cs" />
     <Compile Include="NoSpecial.cs" />
     <Compile Include="SpecialBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

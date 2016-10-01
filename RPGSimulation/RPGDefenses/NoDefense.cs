@@ -9,7 +9,11 @@ namespace McCullough.RPGDefenses
 {
     public class NoDefense : NormalDefense
     {
-        public override void Defend(ICharacter defender, int damage, int armorClass = 0)
+        public NoDefense()
+        {
+            this.armorClass = 0;
+        }
+        public override void Defend(ICharacter defender, int damage)
         {
             defender.ReceiveAttack(damage);
         }

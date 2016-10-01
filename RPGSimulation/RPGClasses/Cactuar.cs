@@ -13,26 +13,29 @@ namespace McCullough.RPGClasses
 {
     public class Cactuar : CharacterBase
     {
-        public Cactuar(string name, int health)
+        public Cactuar(string name, int health, int magic)
         {
             this.CharacterClass = "Cactuar";
-            this.attackBehavior = new OneThousandNeedles();
-            this.spellBehavior = new NoCasting();
-            this.specialBehavior = new NoSpecial();
-            this.defenseBehavior = new NoDefense();
+            this.AttackBehavior = new OneThousandNeedles();
+            this.SpellBehavior = new NoCasting();
+            this.SpecialBehavior = new NoSpecial();
+            this.DefenseBehavior = new NoDefense();
             this.Name = name;
             this.Health = health;
+            this.Magic = -1; // Cactuar cannot comprehend magic
+            this.CharacterDie = GameConstants.Instance.D6;
+            this.Dodge = 2; // 1:1 hit-miss ratio
         }
 
         public Cactuar(string name)
-            : this(name, GameConstants.Instance.PlayerHP)
+            : this(name, GameConstants.Instance.PlayerHP, -1)
         {
 
         }
 
         public Cactuar()
             : this(CharacterBase.AnonymousName + (++CharacterBase.anonymousCounter).ToString(),
-                  GameConstants.Instance.PlayerHP)
+                  GameConstants.Instance.PlayerHP, -1)
         {
 
         }

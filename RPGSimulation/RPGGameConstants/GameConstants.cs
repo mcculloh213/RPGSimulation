@@ -33,7 +33,7 @@ namespace McCullough.RPGGameConstants
 
         // Health and Magic
         private const int playerHP = 50;
-        private const int playerMP = 25;
+        private const int playerMP = 50;
         
         // Static member variable 'instance'
         private static GameConstants instance = new GameConstants();

@@ -1,4 +1,5 @@
-﻿using McCullough.RPGInterfaces;
+﻿using McCullough.RPGGameConstants;
+using McCullough.RPGInterfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,13 @@ namespace McCullough.RPGDefenses
 {
     public class MetalArmor : NormalDefense
     {
-        public override void Defend(ICharacter defender, int damage, int armorClass = 35)
+        public MetalArmor()
         {
-            base.Defend(defender, damage, armorClass);
+            this.armorClass = GameConstants.Instance.D20 + GameConstants.Instance.D12 + GameConstants.Instance.D3;
+        }
+        public override void Defend(ICharacter defender, int damage)
+        {
+            base.Defend(defender, damage);
         }
     }
 }

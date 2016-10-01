@@ -10,12 +10,18 @@ namespace McCullough.RPGDefenses
 {
     public class NormalDefense : IDefense
     {
-        public virtual void Defend(ICharacter defender, int damage, int armorClass = 20)
+        public int armorClass
+        {
+            get;
+            protected set;
+        }
+
+        public virtual void Defend(ICharacter defender, int damage)
         {
             int reduction = LCRNG32.Instance.Next(armorClass);
             int ndamage = damage - reduction;
             if (ndamage < 0) ndamage = 0;
-            Console.WriteLine("Damage reduced by {0}!", reduction);
+            // Console.WriteLine("Damage reduced by {0}!", reduction);
             defender.ReceiveAttack(ndamage);
         }
     }

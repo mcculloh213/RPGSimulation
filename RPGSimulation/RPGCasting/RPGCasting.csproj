@@ -40,10 +40,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Blizzaga.cs" />
+    <Compile Include="Blizzara.cs" />
+    <Compile Include="Blizzard.cs" />
     <Compile Include="CastingBase.cs" />
+    <Compile Include="Cura.cs" />
+    <Compile Include="Curaga.cs" />
+    <Compile Include="Cure.cs" />
     <Compile Include="Firaga.cs" />
+    <Compile Include="Firara.cs" />
+    <Compile Include="Fire.cs" />
     <Compile Include="NoCasting.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Thundara.cs" />
+    <Compile Include="Thunder.cs" />
+    <Compile Include="Thundaga.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LCRNG\LCRNG.csproj">

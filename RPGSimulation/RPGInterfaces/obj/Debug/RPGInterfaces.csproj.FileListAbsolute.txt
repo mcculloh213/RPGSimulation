@@ -6,4 +6,3 @@ C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGSimulation\RPGSimulatio
 C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGSimulation\RPGSimulation\RPGInterfaces\bin\Debug\RPGInterfaces.pdb
 C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGSimulation\RPGSimulation\RPGInterfaces\obj\Debug\RPGInterfaces.dll
 C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGSimulation\RPGSimulation\RPGInterfaces\obj\Debug\RPGInterfaces.pdb
-C:\Users\Howell\Documents\Visual Studio 2015\Projects\RPGSimulation\RPGSimulation\RPGInterfaces\obj\Debug\RPGInterfaces.csprojResolveAssemblyReference.cache

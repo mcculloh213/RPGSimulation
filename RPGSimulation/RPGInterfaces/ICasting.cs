@@ -8,7 +8,12 @@ namespace McCullough.RPGInterfaces
 {
     public interface ICasting
     {
+        int Die { get; }
+        int Cost { get; }
+        string Type { get; }
+
         // Methods
         void Cast(ICharacter caster, ICharacter target);
+        void Heal(ICharacter caster, ICharacter target);
     }
 }

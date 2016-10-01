@@ -1,4 +1,5 @@
-﻿using McCullough.RPGInterfaces;
+﻿using McCullough.RPGGameConstants;
+using McCullough.RPGInterfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +10,14 @@ namespace McCullough.RPGDefenses
 {
     public class HeavyShield : NormalDefense
     {
-        public override void Defend(ICharacter defender, int damage, int armorClass = 40)
+        public HeavyShield()
+        {
+            this.armorClass = 2 * GameConstants.Instance.D20;
+        }
+        public override void Defend(ICharacter defender, int damage)
         {
             Console.WriteLine(defender.Name + " readies their heavy shield!");
-            base.Defend(defender, damage, armorClass);
+            base.Defend(defender, damage);
         }
     }
 }
