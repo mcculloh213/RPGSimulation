@@ -40,21 +40,29 @@ namespace McCullough.RPGClassLookup
         {
             // ERROR MACRO
             { 0x000000, new ERMAC() },
-            // User Characters -- offset 0
+            // User Characters -- offset 0 (0x000000)
             { 0x000001, new Archer() },
             { 0x000002, new Barbarian() },
             { 0x000003, new Bard() },
             { 0x000004, new BlackMage() },
-            { 0x000005, new ComputerWizard() },
-            { 0x000006, new Cleric() },
-            { 0x000007, new Mage() },
-            { 0x000008, new Monk() },
-            { 0x000009, new RedMage() },
-            { 0x00000a, new Warrior() },
-            { 0x00000b, new WhiteMage() },
+            { 0x000005, new Cleric() },
+            { 0x000006, new ComputerWizard() },
+            { 0x000007, new Druid() },
+            { 0x000008, new Fighter() },
+            { 0x000009, new Mage() },
+            { 0x00000a, new Monk() },
+            { 0x00000b, new Paladin() },
+            { 0x00000c, new Ranger() },
+            { 0x00000d, new RedMage() },
+            { 0x00000e, new Rogue() },
+            { 0x00000f, new Sorcerer() },
+            { 0x000010, new Warlock() },
+            { 0x000011, new Warrior() },
+            { 0x000012, new WhiteMage() },
+            { 0x000013, new Wizard() },
             // ERROR MACRO
             { 0x001000, new ERMAC() },
-            // Enemy Characters -- offset 4,096
+            // Enemy Characters -- offset 4,096 (0x001000)
             { 0x001001, new Cactuar() },
             { 0x001002, new Goblin() },
             { 0x001003, new Tonberry() },
