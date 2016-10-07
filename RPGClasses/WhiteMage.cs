@@ -23,7 +23,7 @@ namespace McCullough.RPGClasses
         {
             this.CharacterClass = "White Mage";
             this.AttackBehavior = new Staff();
-            this.SpellBehavior = new NoCasting();
+            this.SpellBehavior = new Curaga();
             this.SpecialBehavior = new NoSpecial();
             this.DefenseBehavior = new Cloak();
             this.Name = name;

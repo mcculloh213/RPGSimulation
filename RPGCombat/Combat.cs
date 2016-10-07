@@ -163,11 +163,11 @@ namespace McCullough.RPGCombat
                 }
                 else if (pos == 1)
                 {
-                    if (attacker.Magic > 0) // attacker has positive MP
+                    if (attacker.Magic > attacker.SpellBehavior.Cost) // attacker has positive MP greater than the cost of the spell
                     {
                         if (attacker.SpellBehavior.Type == "Healing") // Probably can make this "smarter". Define a function that will find party member w/lowest HP
                         {
-                            target = ChooseRandomLivingTarget(attackerGroupIndex);
+                            target = ChooseLowestHealthTarget(attackerGroupIndex);
                             attacker.PerformSpell(target);
                         }
                         else
@@ -224,6 +224,31 @@ namespace McCullough.RPGCombat
                 }
             }
             return null;
+        }
+
+        private ICharacter ChooseLowestHealthTarget(int groupIndex)
+        {
+            ICharacter possibleTarget = null;
+            int numLiving = NumLiving(groupIndex);
+            if (numLiving > 0)
+            {
+                foreach (ICharacter target in combatGroups[groupIndex])
+                {
+                    if (possibleTarget == null)
+                    {
+                        possibleTarget = target;
+                    }
+                    else if (target.Health < possibleTarget.Health)
+                    {
+                        possibleTarget = target;
+                    }
+                    else // target.Health >= possibleTarget.Health
+                    {
+                        // Do nothing
+                    }
+                }
+            }
+            return possibleTarget;
         }
 
         private void DisplayBattleState()

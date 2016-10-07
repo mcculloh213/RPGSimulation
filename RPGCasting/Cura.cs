@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace McCullough.RPGCasting
 {
-    class Cura : CastingBase
+    public class Cura : CastingBase
     {
         public Cura()
         {
@@ -21,7 +21,7 @@ namespace McCullough.RPGCasting
         {
             Console.WriteLine(attacker.Name + " casts Cura on " +
                 target.Name + "!");
-            base.Heal(attacker, attacker);
+            base.Heal(attacker, target);
         }
     }
 }

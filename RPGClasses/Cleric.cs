@@ -16,10 +16,10 @@ namespace McCullough.RPGClasses
         public Cleric(string name, int health, int magic)
         {
             this.CharacterClass = "Cleric";
-            this.AttackBehavior = null;
-            this.SpellBehavior = new NoCasting();
+            this.AttackBehavior = new Club();
+            this.SpellBehavior = new Cura();
             this.SpecialBehavior = new NoSpecial();
-            this.DefenseBehavior = new NoDefense();
+            this.DefenseBehavior = new SmallShield();
             this.Name = name;
             this.Health = health;
             this.Magic = magic;

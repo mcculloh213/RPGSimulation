@@ -16,13 +16,13 @@ namespace McCullough.RPGClasses
         public ERMAC(string name, int health, int magic)
         {
             this.CharacterClass = "ERMAC";
-            this.AttackBehavior = null;
+            this.AttackBehavior = new Punch();
             this.SpellBehavior = new NoCasting();
             this.SpecialBehavior = new NoSpecial();
             this.DefenseBehavior = new NoDefense();
             this.Name = name;
-            this.Health = Int32.MaxValue;
-            this.Magic = Int32.MaxValue;
+            this.Health = 256;
+            this.Magic = 256;
             this.CharacterDie = GameConstants.Instance.D100;
             this.Dodge = 1; // Hit is always guaranteed
         }

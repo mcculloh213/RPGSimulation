@@ -43,10 +43,12 @@
     <Compile Include="BadGradeAttack.cs" />
     <Compile Include="BowAttack.cs" />
     <Compile Include="ChefKnife.cs" />
+    <Compile Include="Club.cs" />
     <Compile Include="FireAttack.cs" />
     <Compile Include="NormalAttack.cs" />
     <Compile Include="OneThousandNeedles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Punch.cs" />
     <Compile Include="SpecialAttack.cs" />
     <Compile Include="Staff.cs" />
     <Compile Include="SwordAttack.cs" />

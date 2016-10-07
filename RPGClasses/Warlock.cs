@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using McCullough.RPGAttacks;
 using McCullough.RPGCasting;
 using McCullough.RPGSpecial;
 using McCullough.RPGDefenses;
@@ -15,10 +16,10 @@ namespace McCullough.RPGClasses
         public Warlock(string name, int health, int magic)
         {
             this.CharacterClass = "Warlock";
-            this.AttackBehavior = null;
+            this.AttackBehavior = new Staff();
             this.SpellBehavior = new NoCasting();
             this.SpecialBehavior = new NoSpecial();
-            this.DefenseBehavior = new NoDefense();
+            this.DefenseBehavior = new Cloak();
             this.Name = name;
             this.Health = health;
             this.Magic = magic;

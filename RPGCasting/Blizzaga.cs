@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace McCullough.RPGCasting
 {
-    class Blizzaga : CastingBase
+    public class Blizzaga : CastingBase
     {
         public Blizzaga()
         {

@@ -16,7 +16,7 @@ namespace McCullough.RPGClasses
         public Troll(string name, int health, int magic)
         {
             this.CharacterClass = "Troll";
-            this.AttackBehavior = new Staff();
+            this.AttackBehavior = new Club();
             this.SpellBehavior = new NoCasting();
             this.SpecialBehavior = new NoSpecial();
             this.DefenseBehavior = new NoDefense();

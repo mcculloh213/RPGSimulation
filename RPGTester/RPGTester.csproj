@@ -54,32 +54,20 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LCRNG\LCRNG.csproj">
-      <Project>{dd99dd69-e728-492d-a232-c8da09ae8145}</Project>
+      <Project>{DD99DD69-E728-492D-A232-C8DA09AE8145}</Project>
       <Name>LCRNG</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RPGAttacks\RPGAttacks.csproj">
-      <Project>{f2b44e7d-7707-4143-ac4c-3138a0dee269}</Project>
-      <Name>RPGAttacks</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RPGCasting\RPGCasting.csproj">
-      <Project>{46b93e02-3f1c-4696-b274-b69eed75eab1}</Project>
-      <Name>RPGCasting</Name>
     </ProjectReference>
     <ProjectReference Include="..\RPGClasses\RPGClasses.csproj">
       <Project>{41d22071-2392-494a-9ec5-8229bbcc430c}</Project>
       <Name>RPGClasses</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RPGClassLookup\RPGClassLookup.csproj">
+      <Project>{0262f06b-00fa-4e74-8854-0220b38cf4c9}</Project>
+      <Name>RPGClassLookup</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RPGCombat\RPGCombat.csproj">
       <Project>{cf1a66e4-3595-4b88-a642-7caa2af1ed02}</Project>
       <Name>RPGCombat</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RPGDefenses\RPGDefenses.csproj">
-      <Project>{4b0eca06-e780-4a1a-9853-328b02db0348}</Project>
-      <Name>RPGDefenses</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RPGGameConstants\RPGGameConstants.csproj">
-      <Project>{0dc22ebe-0d43-46c3-b9b1-5a415c6a7921}</Project>
-      <Name>RPGGameConstants</Name>
     </ProjectReference>
     <ProjectReference Include="..\RPGInterfaces\RPGInterfaces.csproj">
       <Project>{a20d83fb-b644-470e-9666-e5d956061e37}</Project>

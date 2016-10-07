@@ -16,7 +16,7 @@ namespace McCullough.RPGAttacks
             if (step >= 5)
             {
                 int roll = LCRNG32.Instance.Next(100);
-                if (roll % step > 3)
+                if (roll % step >= 3)
                 {
                     Console.WriteLine(attacker.Name + " stabs at " + target.Name + "!");
                     base.Attack(attacker, target);

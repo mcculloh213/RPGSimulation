@@ -16,10 +16,10 @@ namespace McCullough.RPGClasses
         public Goblin(string name, int health, int magic)
         {
             this.CharacterClass = "Goblin";
-            this.AttackBehavior = new Staff();
-            this.SpellBehavior = new Firaga();
+            this.AttackBehavior = new SwordAttack();
+            this.SpellBehavior = new Fire();
             this.SpecialBehavior = new NoSpecial();
-            this.DefenseBehavior = new Cloak();
+            this.DefenseBehavior = new NoDefense();
             this.Name = name;
             this.Health = health;
             this.Magic = magic;

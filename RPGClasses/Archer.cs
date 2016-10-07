@@ -18,7 +18,7 @@ namespace McCullough.RPGClasses
             this.CharacterClass = "Archer";
             this.AttackBehavior = new BowAttack();
             this.SpellBehavior = new NoCasting();
-            this.SpecialBehavior = new NoSpecial();
+            this.SpecialBehavior = new KeenEye();
             this.DefenseBehavior = new LeatherArmor();
             this.Name = name;
             this.Health = health;

@@ -16,7 +16,7 @@ namespace McCullough.RPGClasses
         public Monk(string name, int health, int magic)
         {
             this.CharacterClass = "Monk";
-            this.AttackBehavior = new Staff();
+            this.AttackBehavior = new Punch();
             this.SpellBehavior = new NoCasting();
             this.SpecialBehavior = new NoSpecial();
             this.DefenseBehavior = new Cloak();

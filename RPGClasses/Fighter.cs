@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using McCullough.RPGAttacks;
 using McCullough.RPGCasting;
 using McCullough.RPGSpecial;
 using McCullough.RPGDefenses;
@@ -15,10 +16,10 @@ namespace McCullough.RPGClasses
         public Fighter(string name, int health, int magic)
         {
             this.CharacterClass = "Fighter";
-            this.AttackBehavior = null;
+            this.AttackBehavior = new Punch();
             this.SpellBehavior = new NoCasting();
             this.SpecialBehavior = new NoSpecial();
-            this.DefenseBehavior = new NoDefense();
+            this.DefenseBehavior = new MediumShield();
             this.Name = name;
             this.Health = health;
             this.Magic = magic;

@@ -16,7 +16,7 @@ namespace McCullough.RPGClasses
         public Barbarian(string name, int health, int magic)
         {
             this.CharacterClass = "Barbarian";
-            this.AttackBehavior = null;
+            this.AttackBehavior = new Club();
             this.SpellBehavior = new NoCasting();
             this.SpecialBehavior = new NoSpecial();
             this.DefenseBehavior = new NoDefense();

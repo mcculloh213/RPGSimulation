@@ -23,7 +23,7 @@ namespace McCullough.RPGClasses
             this.Name = name;
             this.Health = health;
             this.Magic = magic;
-            this.CharacterDie = GameConstants.Instance.D20;
+            this.CharacterDie = 2 * GameConstants.Instance.D20;
             this.Dodge = 6; // 5:1 hit-miss ratio
         }
 

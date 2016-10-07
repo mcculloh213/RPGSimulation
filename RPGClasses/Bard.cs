@@ -16,7 +16,7 @@ namespace McCullough.RPGClasses
         public Bard(string name, int health, int magic)
         {
             this.CharacterClass = "Bard";
-            this.AttackBehavior = null;
+            this.AttackBehavior = new SwordAttack();
             this.SpellBehavior = new NoCasting();
             this.SpecialBehavior = new NoSpecial();
             this.DefenseBehavior = new NoDefense();

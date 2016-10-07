@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HexReduce.cs" />
+    <Compile Include="KeenEye.cs" />
     <Compile Include="MultiAttack.cs" />
     <Compile Include="NoSpecial.cs" />
     <Compile Include="SpecialBase.cs" />
